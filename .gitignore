@@ -1,3 +1,13 @@
+# 모델 가중치 파일들
+*.bin
+*.pth
+*.pt
+*.safetensors
+*.ckpt
+
+# 체크포인트 폴더 전체 무시
+**/checkpoint-*/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
