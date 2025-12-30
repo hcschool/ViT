@@ -19,9 +19,9 @@ def seed_everything(seed):
     np.random.seed(seed)
     torch.manual_seed(seed)
     torch.cuda.manual_seed(seed)
-    torch.backends.cudnn.deterministic = True  # 확정적 연산 강제 (속도 약간 저하 가능)
-    torch.backends.cudnn.benchmark = False     # 벤치마크 끔 (재현성 위해)
-    set_seed(seed) # transformers 내부 시드 설정
+    torch.backends.cudnn.deterministic = True 
+    torch.backends.cudnn.benchmark = False
+    set_seed(seed)
 
 def print_and_save_epoch_table(history):
     """Epoch별 학습 기록을 표로 저장"""
