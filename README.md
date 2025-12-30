@@ -25,29 +25,3 @@ ViT/
 ├── vis_utils.py                # Attention Map 추출 및 시각화(히트맵 오버레이) 함수
 └── README.md                   # 프로젝트 설명
 ```
-
-## 코드 실행 과정
-
-- 1.무슨 환경 있나 확인
-    - `conda env list` 
-
-- 2. 만일 환경이 없다면 (만일 이전 명령어에서 fine_tune_vit라는 환경이 있으면 이거 스킵)
-    - `conda create --name fine_tune_vit python=3.11`
-
-- 3. 가상환경 켜기
-    - `conda activate fine_tune_vit` 
-
-- 4. 파일 경로 이동
-    - `cd ViT`
-
-- 5. 필수 라이브러리 설치 (최초 1회만)
-    - `pip install -r requirements.txt`
-
-- 6. InternViT 위해
-    - `pip install flash_attn --no-build-isolation`
-
-- 7. GPU 켜고 코드 실행
-    - `CUDA_VISIBLE_DEVICES=0 python train.py`
-
-- 8. 학습 끝나면
-    - `streamlit run app.py`
