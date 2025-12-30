@@ -190,33 +190,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-'''
-코드 실행 과정
-
-# 무슨 환경 있나 확인
-conda env list 
-
-# 만일 환경이 없다면 (만일 이전 명령어에서 fine_tune_vit라는 환경이 있으면 이거 스킵)
-conda create --name fine_tune_vit python=3.11
-# do you accept ToS 나오면 모두 a 누르고
-# proceed 나오면 모두 y
-
-# 또는 만약 환경 이름을 다르게 만들었다면 해당 이름 사용
-conda activate fine_tune_vit 
-
-# 파일 경로 이동
-cd ViT
-
-# 필수 라이브러리 설치 (최초 1회 - 제가 했습니다. 만일 다시 했는데 안내문구 창에 create virtual env 이런거 나오면 그냥 끄기.)
-pip install -r requirements.txt
-
-# InternViT 위해
-pip install flash_attn --no-build-isolation
-
-# GPU 켜고 코드 실행
-CUDA_VISIBLE_DEVICES=0 python train.py
-
-# 학습 끝나면
-streamlit run app.py
-'''
